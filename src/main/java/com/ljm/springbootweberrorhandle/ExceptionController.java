@@ -21,8 +21,8 @@ public class ExceptionController {
         throw new Http401Exception("This HTTP 401 Exception");
     }
 
-    @RequestMapping(value = "/401", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    public String http401Json() throws Http401Exception {
-        throw new Http401Exception("This HTTP 401 Exception");
+    @RequestMapping(value = "/access")
+    public String accessError() {
+        throw new IllegalAccessError("Illegal Access");
     }
 }
